@@ -23,7 +23,10 @@ public class MarkdownParse {
 
             int closeParen = markdown.indexOf(")", openParen);
             System.out.println("close paren: " + closeParen);
+
             toReturn.add(markdown.substring(openParen + 1, closeParen));
+            System.out.println("after last ), return is " + toReturn);
+            
             currentIndex = closeParen + 1;
             System.out.println("current Index: " + currentIndex);
         }
