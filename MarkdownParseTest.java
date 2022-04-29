@@ -94,10 +94,9 @@ public class MarkdownParseTest {
         assertEquals(List.of("a link on the first line"), MarkdownParse.getLinks(mdFile));
     }
 
-    @Test 
-    public void getLinkstestfile9() { 
-        try { assertEquals(List.of("help me please"), MarkdownParse.getLinks(Files.readString(Path.of("test-file9.md")))); } 
-        catch (Exception i) { 
-            throw new IllegalArgumentException(); } 
-        }
+    public void getLinkstestfile9() throws IOException{
+        Path filepath = Path.of("test-file9.md");
+        String mdFile = Files.readString(filepath);
+        assertEquals(List.of("a link on the first line"), MarkdownParse.getLinks(mdFile));
+    }
 }
