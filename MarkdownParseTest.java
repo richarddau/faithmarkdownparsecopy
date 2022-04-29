@@ -90,7 +90,7 @@ public class MarkdownParseTest {
     @Test
     public void getLinkstestfile8() throws IOException{
         Path filepath = Path.of("test-file8.md");
-        String mdFile = Files.readString(filepath);
+        String mdFile = Files.readString(filepath12);
         assertEquals(List.of("a link on the first line"), MarkdownParse.getLinks(mdFile));
     }
 
